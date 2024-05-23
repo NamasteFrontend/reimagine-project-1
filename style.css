@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.section-1{
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+
+nav{
+    height: 10vw;
+    width: 100%;
+    background-color: transparent;
+    transform: translateY(-50%);
+    z-index: 9;
+    position: absolute;
+}
+.nav-top{
+    height: 50%;
+    width: 100%;
+    background-color: aqua;
+}
+
+.nav-bottom{
+    height: 50%;
+    width: 100%;
+    background-color: transparent;
+  
+}
+.nav-bottom-content{
+   height: 100%;
+   width: 100%;
+   /* background-color: red; */
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.nav-icon{
+    padding: 2vw;
+}
+
+.hamburger .line {
+    width: 35px;
+    height: 4px;
+    background-color: #333;
+    display: block;
+    margin: 8px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+  }
+  
+  .hamburger:hover {
+    cursor: pointer;
+  }
+
+  
+#hamburger-1.is-active .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #hamburger-1.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(13px) rotate(45deg);
+    -ms-transform: translateY(13px) rotate(45deg);
+    -o-transform: translateY(13px) rotate(45deg);
+    transform: translateY(14px) rotate(45deg);
+  }
+  
+  #hamburger-1.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-13px) rotate(-45deg);
+    -ms-transform: translateY(-13px) rotate(-45deg);
+    -o-transform: translateY(-13px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+
+
+
+.nav-icon i{
+    font-size: 1.8vw;
+}
+
+.xbox-icon{
+    height: 100%;
+    width: 10vw;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed; */
+}
+.xbox-icon img{
+  height: 6vw;
+  width: 9vw;
+  position: fixed;
+}
+.sign-in-div{
+    height: 2.5vw;
+    width: 6vw;
+    background-color: red;
+    margin: 2vw;
+    border-radius: 50px;
+}
+
+
+.nav-div{
+    height: 5vw;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+}
