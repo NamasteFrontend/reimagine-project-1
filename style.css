@@ -1,14 +1,32 @@
+@font-face {
+  font-family: ve;
+  src: url(./venite-adoremus-font/VeniteAdoremus-rgRBA.ttf);
+}
+
+
+
+
+
+
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
 }
+
+:root{
+  --side--padding: 0 3vw;
+  --side--margin: 0 3vw;
+}
+
+
 
 .section-1{
     height: 100vh;
     width: 100%;
-    background-color: #fff;
+    background-color: #dadada;
     position: relative;
 }
 
@@ -21,15 +39,131 @@ nav{
     position: absolute;
 }
 .nav-top{
-    height: 50%;
+    height: 5vw;
+    /* height: 50%; */
     width: 100%;
-    background-color: aqua;
+    background-color: #fff;
+    /* background-color: aqua; */
+    display: flex;
+    padding: 0 3vw;
+    justify-content: space-between;
+    align-items: flex-start;
 }
+
+
+
+.microsoft-logo{
+  height: 5vw;
+  width: 10vw;
+}
+
+.microsoft-logo img{
+  margin: 0 2vw;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* background-color: red; */
+}
+
+
+
+.top-middle-content{
+  height: 5vw;
+  /* transform: translateY(-100%); */
+  /* width: 38vw; */
+  display: flex;
+  /* display: none; */
+  padding-top: 2vw;
+  padding-left: 3.5vw;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* align-items: center; */
+  gap: 1.8vw;
+  background-color: blue;
+  margin-left: 5vw;
+  /* z-index: 9; */
+}
+.nav-elem{
+  width: 10vw;
+  /* height: 5vw; */
+  /* pointer-events: none; */
+  /* display: none; */
+  background-color: yellow;
+}
+
+.top-middle-content h4{
+  font-family: ve;
+  font-weight: 400;
+  font-size: 0.90vw;
+  padding-bottom: 2.5vw;
+  cursor: pointer;
+  z-index: 19;
+}
+
+.top-middle-content h5{
+  font-family: ve;
+  font-weight: 200;
+  margin-bottom: 1vw;
+  font-size: 0.8vw;
+  /* opacity: 0; */
+  display: none;
+  transform: translateY(100%);
+  overflow: hidden;
+  cursor: pointer;
+}
+.top-middle-content span{
+  height: 1vw;
+  width: auto;
+  margin-bottom: 1vw;
+  /* background-color: yellow; */
+  display: inline-block;
+  overflow: hidden;
+}
+
+
+
+
+
+
+.top-right-content{
+  height: 5vw;
+  width: 10vw;
+  margin: 0 2vw;
+  /* background-color: #333; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search-icon{
+  font-size: 1.5vw;
+  padding: 1vw;
+}
+
+.cart-icon{
+  font-size: 1.5vw;
+  padding: 1vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .nav-bottom{
     height: 50%;
     width: 100%;
-    background-color: transparent;
+    /* background-color: transparent; */
+    background-color: red;
   
 }
 .nav-bottom-content{
@@ -40,22 +174,25 @@ nav{
    justify-content: space-between;
    align-items: center;
 }
-.nav-icon{
-    padding: 2vw;
+.menu-icon{
+   padding: 0 2vw;
 }
 
 .hamburger .line {
-    width: 35px;
-    height: 4px;
-    background-color: #333;
+    width: 30px;
+    height: 2.5px;
+    background-color: #444;
     display: block;
-    margin: 8px auto;
+    margin: 6px auto;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 
   }
   
+  .line:nth-child(2){
+    height: 2.4px;
+  }
   .hamburger:hover {
     cursor: pointer;
   }
@@ -69,22 +206,35 @@ nav{
     -webkit-transform: translateY(13px) rotate(45deg);
     -ms-transform: translateY(13px) rotate(45deg);
     -o-transform: translateY(13px) rotate(45deg);
-    transform: translateY(14px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
   }
   
   #hamburger-1.is-active .line:nth-child(3) {
     -webkit-transform: translateY(-13px) rotate(-45deg);
     -ms-transform: translateY(-13px) rotate(-45deg);
     -o-transform: translateY(-13px) rotate(-45deg);
-    transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-6px) rotate(-45deg);
   }
 
 
 
 
-.nav-icon i{
-    font-size: 1.8vw;
-}
+  .nav-inner-div{
+    height: 5vw;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+  }
+
+  .nav-inner-content{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
 .xbox-icon{
     height: 100%;
@@ -93,6 +243,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 6vw;
     /* position: fixed; */
 }
 .xbox-icon img{
@@ -101,18 +252,27 @@ nav{
   position: fixed;
 }
 .sign-in-div{
-    height: 2.5vw;
-    width: 6vw;
-    background-color: red;
+    height: 2.6vw;
+    width: 8vw;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 2vw;
     border-radius: 50px;
 }
+.sign-in-div i{
+  /* font-size: 1vw; */
+  padding-left: 1.3vw;
+}
+
+.sign-in-div h5{
+  font-family: ve;
+  /* text-transform: lowercase; */
+  padding-right: 1vw;
+}
 
 
-.nav-div{
-    height: 5vw;
-    width: 100%;
-    background-color: transparent;
-    position: absolute;
-    top: 0;
+.nav-details{
+
 }
