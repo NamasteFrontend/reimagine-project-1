@@ -1,6 +1,6 @@
 let topImg = document.querySelector(".top-img");
 let Video = document.querySelector("#bg-video");
-
+let midVideo = document.querySelector('.mid-video');
 let content = document.querySelector(".content");
 let cursor = document.querySelector(".cursor");
 
@@ -29,11 +29,17 @@ cursor.addEventListener('click', () => {
     if(flag == 0) {
         let tl = gsap.timeline();
 
+        
+        tl.to(midVideo, {
+            opacity: 0,
+            duration: -1
+        },)
         tl.to(topImg, {
             opacity: 0,
             // duration: -5
-        },'a')
+        },)
        Video.play();
+
     }
 })
 
