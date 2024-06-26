@@ -1,25 +1,36 @@
-const cursor = document.querySelector('.custom-cursor');
+const cursor = document.querySelector('.section-2-container');
 const section = document.querySelector('.section-2');
 
-
-
 section.addEventListener('mouseenter', () => {
-    cursor.style.opacity = '100'; // Ensure cursor is visible when entering
-    cursor.style.transition = '3s'; // Apply transition for opacity
-    section.addEventListener('mousemove', (e) => {
-        const mouseX = window.innerWidth - e.clientX; // Calculate inverted X position
-        const mouseY = window.innerHeight - e.clientY; // Calculate inverted Y position
-    
-        cursor.style.left = `${mouseX}px`;
-        cursor.style.top = `${mouseY}px`;
-        
-    });
-    
-});
-section.addEventListener('mouseleave', () => {
+    gsap.to(cursor, { opacity: 1, duration: 3 });
 
+    section.addEventListener('mousemove', handleMouseMove);
+});
+
+section.addEventListener('mouseleave', () => {
     section.removeEventListener('mousemove', handleMouseMove);
 });
 
+function handleMouseMove(e) {
+    const mouseX = window.innerWidth - e.clientX;
+    const mouseY = window.innerHeight - e.clientY;
+    gsap.to(cursor, { 
+        left: mouseX, 
+        top: mouseY, 
+        duration: 2.1, 
+        ease: 'power1.out' 
+    });
+}
 
+document.addEventListener("mousemove", function(dets){
+    document.querySelectorAll(".img").forEach((elem) => {
+       const position = elem.getAttribute("value");
+       let x = (window.innerWidth - dets.clientX * position)/50;
+       let y = (window.innerHeight - dets.clientY * position)/50;
 
+      elem.style.transform = `translateX(${x}px) translateY(${y}px)`
+       gsap.to(elem,{
+        transform: `translateX(${x}px) translateY(${y}px)`
+       })
+    })
+})

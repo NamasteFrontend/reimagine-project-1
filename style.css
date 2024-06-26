@@ -171,42 +171,204 @@ html,body{
 .section-2{
   height: 120vh;
   width: 100%;
-  background-color: rgb(0, 0, 0);
-  overflow: hidden;
-}
-.custom-cursor {
   position: relative;
-  top: 50%;
-  left: 50%;
-  width: 200vw;
-  height: 200vw;
-  /* opacity: 0; */
-  background-size: cover;
-  background-color: rgb(0, 0, 0); /* Semi-transparent black */
-  pointer-events: none; /* Ensure the cursor does not interfere with mouse events */
-  transform: translate(-50%, -50%);
-  transition: width 0.1s, height 0.1s, border-width 0.1s, background-color 0.1s;
-  z-index: 9; /* Ensure the cursor is above other elements */
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;  
+  
+}
+.section-2-container {
+  position: relative;
+ height: 200vh;
+ width: 200vw;
+ background-color: rgb(0, 0, 0);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+
+.section-2-text{
+  z-index: 22;
+  height: 40vh;
+  width: 40vw;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-.item-1{
+.section-2-text h1{
+  font-size: 5vw;
+  color: green;
+}
+.section-2-text h2{
+  color: white;
+  font-size:2.8vw ;
+ }
+.section-2-text p{
+  color: white;
+}
+.section-2-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-2-container .img{
   z-index: 10;
-  height: 40vh;
-  width: 60vw;
-  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
 }
 .item-2{
-  z-index: 10;
-  height: 20vh;
-  width: 17vw;
-  text-align: center;
-  background-image: url(/cyberpunk.gif);
-  background-size: cover;
-  transform: translate(150%, -70%);
+  height: 40vh;
+  width: 13vw;
+  top: 40%;
+  left: 60%;
 }
+.item-3{
+  height: 40vh;
+  width: 13vw;
+  top: 40%;
+  left: 33%;
+}
+.item-4{
+  height: 25vh;
+  width: 20vw;
+  top: 27%;
+}
+.item-5{
+  height: 25vh;
+  width: 20vw;
+  top: 60%;
+}
+.item-6{
+  height: 25vh;
+  width: 20vw;
+  top: 18%;
+  left: 60%;
+}
+.item-7{
+  height: 25vh;
+  width: 20vw;
+  top: 18%;
+  right: 60.5%;
+}
+.item-8{
+  height: 25vh;
+  width: 20vw;
+  top: 40%;
+  right: 70%;
+}
+.item-9{
+  height: 25vh;
+  width: 20vw;
+  top: 50%;
+  left: 69%;
+}
+.item-10{
+  height: 25vh;
+  width: 20vw;
+  bottom: 18%;
+  right: 60.5%;
+}
+.item-11{
+  height: 25vh;
+  width: 20vw;
+  bottom: 18%;
+  left: 60%;
+}
+.item-12{
+  height: 40vh;
+  width: 13vw;
+  bottom: 12%;
+  left: 75%;
+}
+.item-13{
+  height: 40vh;
+  width: 13vw;
+  top: 12%;
+  right: 72%;
+}
+.item-14{
+  height: 40vh;
+  width: 13vw;
+  top: 12%;
+  left: 72%;
+}
+.item-15{
+  height: 40vh;
+  width: 13vw;
+  bottom: 12%;
+  right: 75%;
+}
+.item-16{
+  height: 40vh;
+  width: 13vw;
+  top: 50%;
+  right: 83%;
+}
+.item-17{
+  height: 40vh;
+  width: 13vw;
+  top: 35%;
+  left: 82%;
+}
+.item-18{
+  height: 25vh;
+  width: 20vw;
+  top: 10%;
+  right: 83%;
+}
+.item-19{
+  height: 25vh;
+  width: 20vw;
+  top: 10%;
+  left: 82%;
+}
+.item-20{
+  height: 25vh;
+  width: 20vw;
+  bottom: 10%;
+  left: 85%;
+}
+.item-21{
+  height: 25vh;
+  width: 20vw;
+  bottom: 10%;
+  right: 85%;
+}
+.item-22{
+  height: 25vh;
+  width: 20vw;
+  top: 40%;
+  right: 91%;
+}
+.item-23{
+  height: 25vh;
+  width: 20vw;
+  top: 45%;
+  left: 91%;
+}
+.item-24{
+  height: 30vh;
+  width: 23vw;
+  top: 8%;
+  left: 44.3%;
+}
+.item-25{
+  height: 30vh;
+  width: 23vw;
+  bottom: 8%;
+  left: 44.3%;
+}
+/* 
+
 .item-3{
   z-index: 10;
   height: 20vh;
@@ -214,7 +376,7 @@ html,body{
   text-align: center;
   background-image: url(/grounded.gif);
   background-size: cover;
-  transform: translate(-150%, -140%);
+  transform: translate(-160%, -140%);
   position: absolute;
 }
 .item-4{
@@ -224,7 +386,7 @@ html,body{
   text-align: center;
   background-image: url(/2k24.jpg);
   background-size: cover;
-  transform: translate(-180%, 20%);
+  transform: translate(-190%, 20%);
   position: absolute;
   border-radius: 10px;
 }
@@ -236,7 +398,7 @@ html,body{
   background-image: url(/gta.gif);
   background-position: center;
   background-size: cover;
-  transform: translate(160%, 70%);
+  transform: translate(170%, 70%);
   position: absolute;
   border-radius: 10px;
 }
@@ -248,7 +410,7 @@ html,body{
   background-image: url(/pubg.gif);
   background-position: center;
   background-size: cover;
-  transform: translate(180%, 80%);
+  transform: translate(190%, 80%);
   position: absolute;
   border-radius: 10px;
 }
@@ -260,7 +422,7 @@ html,body{
   background-image: url(/Froza.webp);
   background-position: center;
   background-size: cover;
-  transform: translate(-190%, -20%);
+  transform: translate(-200%, -20%);
   position: absolute;
   border-radius: 10px;
 }
@@ -272,7 +434,7 @@ html,body{
   background-image: url(/Assasin.gif);
   background-position: center;
   background-size: cover;
-  transform: translate(-0%, 90%);
+  transform: translate(-10%, 90%);
   position: absolute;
   border-radius: 10px;
 }
@@ -284,7 +446,7 @@ html,body{
   background-image: url(/COD.gif);
   background-position: center;
   background-size: cover;
-  transform: translate(10%, -160%);
+  transform: translate(20%, -160%);
   position: absolute;
   border-radius: 10px;
 }
@@ -296,7 +458,7 @@ html,body{
   background-image: url(/alan\ wake.jpg);
   background-position: center;
   background-size: cover;
-  transform: translate(335%, -50%);
+  transform: translate(345%, -50%);
   position: absolute;
   border-radius: 10px;
 }
@@ -308,7 +470,7 @@ html,body{
   background-image: url(/halo.gif);
   background-position: center;
   background-size: cover;
-  transform: translate(-330%, -110%);
+  transform: translate(-340%, -110%);
   position: absolute;
   border-radius: 10px;
 }
@@ -320,7 +482,7 @@ html,body{
   background-image: url(/controll.webp);
   background-position: center;
   background-size: cover;
-  transform: translate(-40%, 130%);
+  transform: translate(-50%, 130%);
   position: absolute;
   border-radius: 10px;
 }
@@ -332,7 +494,7 @@ html,body{
   background-image: url(/hellblade.jpg);
   background-position: center;
   background-size: cover;
-  transform: translate(310%, 110%);
+  transform: translate(320%, 110%);
   position: absolute;
   border-radius: 10px;
 }
@@ -344,7 +506,7 @@ html,body{
   background-image: url(/dustborn.jpg);
   background-position: center;
   background-size: cover;
-  transform: translate(370%, 210%);
+  transform: translate(380%, 210%);
   position: absolute;
   border-radius: 10px;
 }
@@ -356,7 +518,7 @@ html,body{
   background-image: url(/takn.gif);
   background-position: center;
   background-size: cover;
-  transform: translate(250%, -210%);
+  transform: translate(260%, -210%);
   position: absolute;
   border-radius: 10px;
 }
@@ -368,7 +530,7 @@ html,body{
   background-image: url(/sea\ of\ thieves.jpg);
   background-position: center;
   background-size: cover;
-  transform: translate(410%, -0%);
+  transform: translate(420%, -0%);
   position: absolute;
   border-radius: 10px;
 }
@@ -380,7 +542,7 @@ html,body{
   background-image: url(/elden\ ring.jpg);
   background-position: center;
   background-size: cover;
-  transform: translate(410%, -60%);
+  transform: translate(420%, -60%);
   position: absolute;
   border-radius: 10px;
 }
@@ -392,7 +554,7 @@ html,body{
   background-image: url(/diablo.jpeg);
   background-position: center;
   background-size: cover;
-  transform: translate(410%, 90%);
+  transform: translate(420%, 90%);
   position: absolute;
   border-radius: 10px;
 }
@@ -404,7 +566,7 @@ html,body{
   background-image: url(/assais\ ninja.jpg);
   background-position: center;
   background-size: cover;
-  transform: translate(490%, -140%);
+  transform: translate(500%, -140%);
   position: absolute;
   border-radius: 10px;
 }
@@ -416,7 +578,7 @@ html,body{
   background-image: url(/MK.jpeg);
   background-position: center;
   background-size: cover;
-  transform: translate(900%, -200%);
+  transform: translate(910%, -200%);
   position: absolute;
   border-radius: 10px;
 }
@@ -428,7 +590,7 @@ html,body{
   background-image: url(/red.jpeg);
   background-position: center;
   background-size: cover;
-  transform: translate(160%, -100%);
+  transform: translate(170%, -100%);
   position: absolute;
   border-radius: 10px;
 }
@@ -440,7 +602,7 @@ html,body{
   background-image: url(/fc24.jpeg);
   background-position: center;
   background-size: cover;
-  transform: translate(-160%, -160%);
+  transform: translate(-170%, -160%);
   position: absolute;
   border-radius: 10px;
 }
@@ -452,7 +614,7 @@ html,body{
   background-image: url(/fifa\ 22.jpeg);
   background-position: center;
   background-size: cover;
-  transform: translate(-0%, -270%);
+  transform: translate(-10%, -270%);
   position: absolute;
   border-radius: 10px;
 }
@@ -464,7 +626,7 @@ html,body{
   background-image: url(/the\ witcher.jpg);
   background-position: center;
   background-size: cover;
-  transform: translate(60%, 200%);
+  transform: translate(70%, 200%);
   position: absolute;
   border-radius: 10px;
 }
@@ -476,7 +638,7 @@ html,body{
   background-image: url(/cricket.jpeg);
   background-position: center;
   background-size: cover;
-  transform: translate(-250%, 80%);
+  transform: translate(-260%, 80%);
   position: absolute;
   border-radius: 10px;
 }
@@ -488,7 +650,7 @@ html,body{
   background-image: url(/harry.jpg);
   background-position: center;
   background-size: cover;
-  transform: translate(-150%, 100%);
+  transform: translate(-160%, 100%);
   position: absolute;
   border-radius: 10px;
 }
@@ -500,7 +662,7 @@ html,body{
   background-image: url(/avater.jpg);
   background-position: center;
   background-size: cover;
-  transform: translate(-190%, 200%);
+  transform: translate(-200%, 200%);
   position: absolute;
   border-radius: 10px;
 }
@@ -512,7 +674,7 @@ html,body{
   background-image: url(/assassins.gif);
   background-position: center;
   background-size: cover;
-  transform: translate(-160%, 80%);
+  transform: translate(-170%, 80%);
   position: absolute;
   border-radius: 10px;
 }
@@ -524,7 +686,7 @@ html,body{
   background-image: url(/Tanis.avif);
   background-position: center;
   background-size: cover;
-  transform: translate(-480%, -50%);
+  transform: translate(-490%, -50%);
   position: absolute;
   border-radius: 10px;
 }
@@ -536,7 +698,7 @@ html,body{
   background-image: url(/apex-legends-2019-4k-2t.jpg.crdownload);
   background-position: center;
   background-size: cover;
-  transform: translate(-520%, -50%);
+  transform: translate(-530%, -50%);
   position: absolute;
   border-radius: 10px;
 }
@@ -547,7 +709,7 @@ html,body{
   text-align: center;
   background-image: url(/fortnite.gif);
   background-size: cover;
-  transform: translate(-370%, -290%);
+  transform: translate(-380%, -290%);
   position: absolute;
   border-radius: 10px;
 }
@@ -559,7 +721,7 @@ html,body{
   background-image: url(/sims.webp);
   background-position: center;
   background-size: cover;
-  transform: translate(-440%, -270%);
+  transform: translate(-450%, -270%);
   position: absolute;
   border-radius: 10px;
 }
@@ -571,33 +733,18 @@ html,body{
   background-image: url(/rough.jpg);
   background-position: center;
   background-size: cover;
-  transform: translate(-320%, -425%);
+  transform: translate(-330%, -425%);
   position: absolute;
   border-radius: 10px;
-}
-.item-1 h1{
-  position: absolute;
-  font-size: 7vw;
-  color: rgb(4, 251, 4);
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.item-1 h2{
-  font-size: 3vw;
-  color: white;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  left: 50%;
-  top: 40%;
-}
-.item-1 p{
-  color: rgb(186, 186, 186);
-  transform: translate(-50%, -50%);
-  position: absolute;
-  left: 50%;
-  top: 60%;
-}
+}  */
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 600px) {
   .item-1 h1{
     width: 100%;
